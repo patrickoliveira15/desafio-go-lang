@@ -6,7 +6,7 @@ ADD . /app
 
 WORKDIR /app
 
-RUN go build -o /app/hello .
+RUN go build -ldflags '-s -w' -o /app/hello .
 
 FROM scratch
 
